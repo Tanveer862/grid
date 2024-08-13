@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    clifford: '#da373d',
+                }
+            }
+        }
+    }
+    </script>
+    <link rel="stylesheet" href="style.css">
+    <title>Grid</title>
+    <style>
+        /* Ensure full height and width for the body and html */
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+    </style>
+</head>
+<body class="w-full h-full">
+    <div class="grid w-full h-full text-center  md:grid-cols-4 gap-1 text-white relative ">
+        <div class="bg-green-600 col-start-1 col-end-5 md:col-start-1 md:col-end-5">Navebar</div>
+        <div class="sidebar bg-slate-600 row-span-2 md:col-span-1 col-start-1  hidden md:block">Sidebar</div>
+        <div class="bg-red-400 md:col-start-2   col-start-1 col-end-5  ">Main</div>
+     
+    
+        <div class="img-container  md:col-start-2 md:col-end-3 col-start-1 col-end-5 relative ">
+            <div class="overlay"></div>
+            <img class="h-full w-full object-cover" src="https://media.istockphoto.com/id/1502570920/photo/meadows-and-horses-near-to-el-meicin-refuge-at-dusk-ubi%C3%B1as-la-mesa-natural-park-asturias-spain.jpg?s=612x612&w=0&k=20&c=0XTxyLwHsAxBOmRZCjaBrbKHjUPIy1bBGKQry3v2-Z0=" alt="">
+        </div>
+        <div class="img1-container relative md:col-start-3 md:col-end-4  col-start-1 col-end-5 ">
+            <div class="overlay"></div>
+            <img class="h-full w-full object-cover" src="https://media.istockphoto.com/id/1370772148/photo/track-and-mountains-in-valle-del-lago-somiedo-nature-park-asturias-spain.jpg?s=612x612&w=0&k=20&c=QJn62amhOddkJSbihcjWKHXShMAfcKM0hPN65aCloco=" alt="">
+        </div>
+        <div class="img1-container h-full relative col-start-1 col-end-5 md:col-start-4 md:col-end-5  ">
+            <div class="overlay"></div>
+            <img class="h-full w-full object-cover" src="https://static.vecteezy.com/system/resources/previews/006/240/302/non_2x/abstract-soft-focus-sunset-field-landscape-of-yellow-flowers-and-grass-meadow-warm-golden-hour-sunset-sunrise-time-tranquil-spring-summer-nature-closeup-and-blurred-forest-background-idyllic-nature-photo.jpg" alt="">
+        </div>
+        <div class="col-start-1 col-end-5 bg-red-800">Footer</div>
+    </div>
+</body>
+</html>
